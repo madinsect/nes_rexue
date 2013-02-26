@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		package="com.trip.nesgame.doubledragon"
+		package="com.trip.nesgame.rexue"
 		android:versionCode="1"
 		android:versionName="1.0">
 
-	<uses-sdk android:minSdkVersion="3" />
+	<uses-sdk android:minSdkVersion="7" />
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -15,11 +15,9 @@
 	<application android:label="@string/app_label"
 			android:icon="@drawable/app_icon">
 
-		<activity android:name="MainActivity"
-				android:configChanges="orientation|keyboardHidden">
+	    <activity android:name="MainActivity" android:label="@string/app_label" android:screenOrientation="portrait">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
@@ -45,7 +43,7 @@
 		<activity android:name="CheatsActivity" android:process=":emulator"/>
 		<activity android:name="EmulatorSettings" android:process=":emulator"/>
 
-		<activity android:name="com.trip.nesgame.doubledragon.EmulatorActivity"
+		<activity android:name="com.trip.nesgame.rexue.EmulatorActivity"
 				android:process=":emulator"
 				android:launchMode="singleTask"
 				android:configChanges="orientation|keyboardHidden">
@@ -58,7 +56,7 @@
 			</intent-filter>
 		</activity>
 
-		<service android:name="com.trip.nesgame.doubledragon.EmulatorService" android:process=":emulator"/>
+		<service android:name="com.trip.nesgame.rexue.EmulatorService" android:process=":emulator"/>
 
 	</application>
 </manifest>
